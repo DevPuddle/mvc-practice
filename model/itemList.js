@@ -8,5 +8,11 @@ const itemListSchema = new mongoose.Schema({
     numInput: {
         type: Number,
         required: true,
+    },
+    date: {
+        type: Date,
+        default: Date.now,
     }
 })
+
+module.export = mongoose.model("ItemList", itemListSchema, "items")
